@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-argo
+  namespace: Edi
+  labels:
+    app: test-argo
+    team: Edi
+    custom-label: my-awesome-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-argo
+  template:
+    metadata:
+      labels:
+        app: test-argo
+        custom-label: my-awesome-app
+    spec:
+      containers:
+      - name: test-argo
+        image: nginx:latest
+        ports:
+        - containerPort: 80

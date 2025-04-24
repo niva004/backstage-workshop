@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-argo
+  namespace: Edi
+  labels:
+    app: test-argo
+    team: Edi
+    custom-label: my-awesome-app
+spec:
+  selector:
+    app: test-argo
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP

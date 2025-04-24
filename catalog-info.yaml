@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-argo
+  description: Sample application for ArgoCD deployment
+  annotations:
+    github.com/project-slug: github.com?owner=niva004&repo=backstage-workshop
+    backstage.io/kubernetes-id: test-argo
+  labels:
+    team: Edi
+spec:
+  type: service
+  lifecycle: experimental
+  owner: Edi
